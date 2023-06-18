@@ -1,5 +1,11 @@
+import { Hero } from 'shared/ui';
+
 function Home() {
-  return <h1>Hello World</h1>;
+  return (
+    <div className="container">
+      <Hero />
+    </div>
+  );
 }
 
 export default Home;
