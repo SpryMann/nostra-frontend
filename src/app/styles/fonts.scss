@@ -1,5 +1,13 @@
 @font-face {
   font-family: 'Noto Sans';
+  src: url('/fonts/Noto_Sans/NotoSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
   src: url('/fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -8,8 +16,24 @@
 
 @font-face {
   font-family: 'Noto Sans';
+  src: url('/fonts/Noto_Sans/NotoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/Noto_Sans/NotoSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
   src: url('/fonts/Noto_Sans/NotoSans-Bold.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-stretch: normal;
 }

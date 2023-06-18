@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
@@ -9,4 +17,40 @@ body {
   font-size: 1.6rem;
   color: var(--hex-black);
   background-color: var(--hex-white);
+}
+
+button {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 100%;
+  width: 100%;
+
+  @media screen and (min-width: 576px) {
+    padding: 0;
+    max-width: 54rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 72rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 96rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 114rem;
+  }
+
+  @media screen and (min-width: 1400px) {
+    max-width: 132rem;
+  }
 }

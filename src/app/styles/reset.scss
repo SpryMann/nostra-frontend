@@ -102,6 +102,19 @@ table {
 }
 
 input {
+  border: none;
   -webkit-appearance: none;
   border-radius: 0;
+  background: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
 }

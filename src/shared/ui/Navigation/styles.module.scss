@@ -1,0 +1,297 @@
+.navigation {
+  position: fixed;
+  top: 7.2rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 7.2rem);
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 10rem;
+    height: calc(100vh - 10rem);
+    background: rgba(16, 24, 40, 0.3);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: static;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    opacity: 100%;
+    visibility: visible;
+    pointer-events: unset;
+    transform: unset;
+  }
+
+  &Content {
+    padding: 2.4rem 0;
+    height: 100%;
+    background: var(--hex-white);
+    overflow: auto;
+
+    @media screen and (min-width: 768px) {
+      width: 30rem;
+      transform: translateX(-100%);
+      transition: all 0.2s ease;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 1.2rem 1.6rem;
+      width: 100%;
+      transform: unset;
+      overflow: unset;
+    }
+  }
+
+  &Search {
+    margin-bottom: 3.2rem;
+    padding: 0 1.6rem;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-bottom: 3.2rem;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+
+  &Item {
+    @media screen and (min-width: 1200px) {
+      position: relative;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          .navigationDropdowns {
+            opacity: 100%;
+            visibility: visible;
+            pointer-events: unset;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  &Link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.6rem;
+    width: 100%;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--color-gray-900);
+    line-height: 2.4rem;
+    transition: color 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-gray-700);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 1.2rem 0;
+    }
+
+    &WithSubmenu {
+      display: none;
+
+      @media screen and (min-width: 1200px) {
+        display: flex;
+      }
+    }
+
+    &Button {
+      @media screen and (min-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  &Icon {
+    margin-top: 0.2rem;
+    font-size: 2rem;
+    color: var(--color-gray-900);
+  }
+
+  &ButtonWrapper {
+    padding: 0 1.6rem;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 4.4rem;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--hex-white);
+    background: var(--hex-black);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    outline: none;
+    transition: box-shadow 0.2s ease;
+
+    &:focus {
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+    }
+  }
+
+  &Dropdowns {
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      top: calc(100% - 1.2rem + 0.8rem);
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 20rem);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 0.8rem;
+      background: var(--hex-white);
+      box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+        0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-0.3rem);
+      transition: all 0.1s ease;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          opacity: 100%;
+          visibility: visible;
+          pointer-events: unset;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &Active {
+    transform: translateX(0);
+
+    @media screen and (min-width: 768px) {
+      opacity: 100%;
+      visibility: visible;
+      pointer-events: unset;
+
+      .navigationContent {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  padding: 1.6rem;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    width: 20rem;
+  }
+
+  &Button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      pointer-events: none;
+    }
+  }
+
+  &Icon {
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &Title {
+    padding: 0 1.6rem;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color-gray-600);
+    line-height: 2rem;
+
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+    }
+  }
+
+  &List {
+    display: none;
+    flex-direction: column;
+    gap: 2.8rem;
+    margin-top: 1.6rem;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    &Active {
+      display: flex;
+    }
+  }
+
+  &Link {
+    display: block;
+    padding: 0 2.4rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--color-gray-900);
+    line-height: 2.4rem;
+    transition: color 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-gray-700);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 0 1.2rem;
+    }
+  }
+
+  &Active {
+    display: block;
+  }
+}
