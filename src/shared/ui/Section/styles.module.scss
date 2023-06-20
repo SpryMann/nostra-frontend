@@ -1,0 +1,17 @@
+.section {
+  &Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+  }
+
+  &Title {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    color: var(--color-gray-900);
+    letter-spacing: -0.1rem;
+    white-space: pre-line;
+  }
+}

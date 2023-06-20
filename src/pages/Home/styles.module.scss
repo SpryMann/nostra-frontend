@@ -1,0 +1,45 @@
+.home {
+  &Hero {
+    margin-bottom: 3.2rem;
+  }
+
+  &Brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    &Wrapper {
+      margin-bottom: 6.4rem;
+    }
+  }
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  opacity: 100%;
+  transition: opacity 0.2s ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  &Image {
+    max-width: 7rem;
+    height: auto;
+    object-fit: cover;
+  }
+}

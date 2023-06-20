@@ -7,7 +7,13 @@ import heroData from './data';
 
 import styles from './styles.module.scss';
 
-function Hero() {
+interface Props {
+  className?: string;
+}
+
+function Hero(props: Props) {
+  const { className = '' } = props;
+
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
 
   const handleSlideRight = () =>
@@ -20,7 +26,7 @@ function Hero() {
     );
 
   return (
-    <div className={styles.hero}>
+    <div className={classNames(styles.hero, className)}>
       <div className={styles.heroControllers}>
         <button
           className={styles.heroController}
