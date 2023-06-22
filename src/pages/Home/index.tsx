@@ -1,4 +1,4 @@
-import { Experiences } from 'features';
+import { Curated, Experiences } from 'features';
 import { Link } from 'react-router-dom';
 import { Hero, Section } from 'shared/ui';
 
@@ -23,7 +23,8 @@ function Home() {
           ))}
         </div>
       </Section>
-      <Experiences />
+      <Experiences className={styles.homeExperiences} />
+      <Curated />
     </div>
   );
 }
