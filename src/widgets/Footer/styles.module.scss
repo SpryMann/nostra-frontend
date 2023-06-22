@@ -1,0 +1,103 @@
+.footer {
+  margin-top: 9.6rem;
+  background: var(--color-gray-50);
+
+  &Top {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 6.4rem 0;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      gap: 1.6rem;
+    }
+  }
+
+  &Info {
+    max-width: 100%;
+
+    @media screen and (min-width: 992px) {
+      max-width: 32.5rem;
+    }
+  }
+
+  &Logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+    fill: var(--color-gray-900);
+  }
+
+  &Text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--color-gray-500);
+  }
+
+  &Navigation {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3.2rem;
+
+    @media screen and (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+      margin-left: auto;
+    }
+  }
+
+  &Bottom {
+    border-top: 1px solid var(--color-gray-200);
+    padding: 2.4rem 0;
+    text-align: center;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &TitleWrapper {
+    margin-bottom: 1.6rem;
+  }
+
+  &Title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: var(--color-gray-900);
+    text-transform: uppercase;
+  }
+
+  &Link {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--color-gray-500);
+
+    @media (hover: hover) and (pointer: fine) {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-gray-700);
+      }
+    }
+  }
+
+  &Payments {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &Logo {
+    max-width: 4rem;
+    height: auto;
+    object-fit: cover;
+  }
+}

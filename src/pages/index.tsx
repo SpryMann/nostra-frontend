@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
-import { Header } from 'widgets';
+import { Footer, Header } from 'widgets';
 
 const Home = lazy(() => import('./Home'));
 
@@ -9,6 +9,7 @@ function Layout() {
     <>
       <Header />
       <Outlet />
+      <Footer />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
 }
 
