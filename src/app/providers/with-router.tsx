@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 const withRouter = (component: () => React.ReactNode) =>
   function () {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/nostra-frontend">
         <Suspense fallback="Loading...">{component()}</Suspense>
       </BrowserRouter>
     );
