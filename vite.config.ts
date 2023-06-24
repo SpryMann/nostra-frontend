@@ -18,5 +18,4 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/shared/misc/setupTests.ts'],
   },
-  base: '/nostra-frontend/',
 });
