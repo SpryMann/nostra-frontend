@@ -20,6 +20,8 @@ body {
 }
 
 button {
+  font-family: 'Noto Sans';
+
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
