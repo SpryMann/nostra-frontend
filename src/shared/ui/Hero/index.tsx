@@ -55,7 +55,7 @@ function Hero(props: Props) {
           <div
             className={styles.heroItem}
             key={item.id}
-            inert={index === currentSliderIndex ? null : ''}
+            {...{ inert: index === currentSliderIndex ? null : '' }}
           >
             <div className={styles.heroImageWrapper}>
               <img
