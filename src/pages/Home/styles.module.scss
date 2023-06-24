@@ -15,13 +15,9 @@
     @media screen and (min-width: 1200px) {
       grid-template-columns: repeat(8, 1fr);
     }
-
-    &Wrapper {
-      margin-bottom: 6.4rem;
-    }
   }
 
-  &Experiences {
+  &Section {
     margin-bottom: 6.4rem;
   }
 }

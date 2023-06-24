@@ -1,4 +1,4 @@
-import { Curated, Experiences } from 'features';
+import { Curated, Experiences, Featured } from 'features';
 import { Link } from 'react-router-dom';
 import { Hero, Section } from 'shared/ui';
 
@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="container">
       <Hero className={styles.homeHero} />
-      <Section className={styles.homeBrandsWrapper} title="Brands">
+      <Section className={styles.homeSection} title="Brands">
         <div className={styles.homeBrands}>
           {brandsData.map((item) => (
             <Link className={styles.brand} to={item.path} key={item.id}>
@@ -23,8 +23,9 @@ function Home() {
           ))}
         </div>
       </Section>
-      <Experiences className={styles.homeExperiences} />
-      <Curated />
+      <Experiences className={styles.homeSection} />
+      <Curated className={styles.homeSection} />
+      <Featured />
     </div>
   );
 }
