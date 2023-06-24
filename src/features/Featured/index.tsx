@@ -6,11 +6,17 @@ import featuredData from './data';
 
 import styles from './styles.module.scss';
 
-function Featured() {
+interface Props {
+  className?: string;
+}
+
+function Featured(props: Props) {
+  const { className = '' } = props;
   const [containerRef, offsetX, handleSlide, arrowsState] = useSlider();
 
   return (
     <Section
+      className={className}
       title="Featured products"
       headerRight={
         <div className={styles.buttons}>

@@ -1,6 +1,7 @@
-import { Curated, Experiences, Featured } from 'features';
+import classNames from 'classnames';
+import { Curated, Experiences, Featured, Subscription } from 'features';
 import { Link } from 'react-router-dom';
-import { Hero, Section } from 'shared/ui';
+import { Hero, Offer, Section } from 'shared/ui';
 
 import brandsData from './data';
 
@@ -25,7 +26,12 @@ function Home() {
       </Section>
       <Experiences className={styles.homeSection} />
       <Curated className={styles.homeSection} />
-      <Featured />
+      <Featured className={styles.homeSection} />
+      <div className={classNames(styles.separator, styles.homeSeparator)}>
+        <div className={styles.separatorInner} />
+      </div>
+      <Offer className={styles.homeSection} />
+      <Subscription />
     </div>
   );
 }

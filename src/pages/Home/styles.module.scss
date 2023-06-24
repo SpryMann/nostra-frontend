@@ -20,6 +20,10 @@
   &Section {
     margin-bottom: 6.4rem;
   }
+
+  &Separator {
+    margin: 0 auto 6.4rem;
+  }
 }
 
 .brand {
@@ -41,5 +45,24 @@
     max-width: 7rem;
     height: auto;
     object-fit: cover;
+  }
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  padding: 0 0.5rem;
+  width: 40%;
+  height: 1.4rem;
+  background: var(--color-gray-200);
+
+  &Inner {
+    border-radius: 0.8rem;
+    margin: auto;
+    width: 100%;
+    height: 0.6rem;
+    background: var(--color-gray-900);
   }
 }
