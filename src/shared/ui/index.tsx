@@ -1,3 +1,4 @@
+export { default as Breadcrumbs } from './Breadcrumbs';
 export { default as CategoryCard } from './CategoryCard';
 export { default as Hero } from './Hero';
 export { default as Logo } from './Logo';

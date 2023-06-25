@@ -1,0 +1,43 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  &Title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-600);
+    text-transform: capitalize;
+
+    &Link {
+      border-radius: 0.6rem;
+      padding: 0.4rem 0.8rem;
+      background: transparent;
+      outline: none;
+      transition: background 0.2s ease;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: var(--color-gray-50);
+        }
+      }
+
+      &:focus {
+        background: var(--color-gray-50);
+      }
+    }
+  }
+
+  &Arrow {
+    margin-top: 0.2rem;
+    color: var(--color-gray-300);
+  }
+
+  &Last {
+    .breadcrumbTitle {
+      font-weight: 600;
+      color: var(--color-gray-700);
+    }
+  }
+}
