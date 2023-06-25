@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { MdLogout } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { AvatarImage } from 'shared/assets';
 import { useOnClickOutside } from 'shared/lib';
 
 import menuData from './data';
@@ -48,7 +49,7 @@ function Menu(props: Props) {
                 <div className={styles.menuAvatarWrapper}>
                   <img
                     className={styles.menuAvatar}
-                    src="/images/avatar.jpg"
+                    src={AvatarImage}
                     alt="Rhaenyra Targaryen"
                   />
                 </div>

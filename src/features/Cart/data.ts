@@ -1,8 +1,18 @@
+import {
+  CartFifthImage,
+  CartFirstImage,
+  CartFourthImage,
+  CartSecondImage,
+  CartSeventhImage,
+  CartSixthImage,
+  CartThirdImage,
+} from 'shared/assets';
+
 const cartData = [
   {
     id: 1,
     title: 'SHEIN SXY Floral Print Stand Neck Mesh Dress',
-    image: '/images/cart/cart_1.webp',
+    image: CartFirstImage,
     price: 8,
     oldPrice: 0,
     quantity: 1,
@@ -12,7 +22,7 @@ const cartData = [
   {
     id: 2,
     title: 'Contrast Lace Zipper Back Cami Wedding Dress',
-    image: '/images/cart/cart_2.webp',
+    image: CartSecondImage,
     price: 79,
     oldPrice: 0,
     quantity: 1,
@@ -23,7 +33,7 @@ const cartData = [
     id: 3,
     title:
       'SHEIN BAE Draped Collar Chain Detail Crisscross Backless Ruched Cami Dress',
-    image: '/images/cart/cart_3.webp',
+    image: CartThirdImage,
     price: 11,
     oldPrice: 0,
     quantity: 1,
@@ -33,7 +43,7 @@ const cartData = [
   {
     id: 4,
     title: 'SHEIN Belle Layered Fringe Trim Backless Sequin Halter Dress',
-    image: '/images/cart/cart_4.webp',
+    image: CartFourthImage,
     price: 35,
     oldPrice: 0,
     quantity: 3,
@@ -43,7 +53,7 @@ const cartData = [
   {
     id: 5,
     title: 'Double Crazy Mesh Panel M-slit Hem Bustier Formal Dress',
-    image: '/images/cart/cart_5.webp',
+    image: CartFifthImage,
     price: 29,
     oldPrice: 0,
     quantity: 1,
@@ -53,7 +63,7 @@ const cartData = [
   {
     id: 6,
     title: 'Double Crazy Contrast Mesh Split Thigh Bustier Cami Dress',
-    image: '/images/cart/cart_6.jpg',
+    image: CartSixthImage,
     price: 27,
     oldPrice: 0,
     quantity: 1,
@@ -63,7 +73,7 @@ const cartData = [
   {
     id: 7,
     title: 'Contrast Mesh Split Thigh Bustier Cami Dress',
-    image: '/images/cart/cart_7.jpg',
+    image: CartSeventhImage,
     price: 27,
     oldPrice: 0,
     quantity: 1,

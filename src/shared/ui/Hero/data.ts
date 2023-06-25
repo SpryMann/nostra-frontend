@@ -1,3 +1,10 @@
+import {
+  HeroFirstImage,
+  HeroFourthImage,
+  HeroSecondImage,
+  HeroThirdImage,
+} from 'shared/assets';
+
 interface HeroDataItem {
   id: number;
   image: string;
@@ -7,22 +14,22 @@ interface HeroDataItem {
 const heroData: HeroDataItem[] = [
   {
     id: 1,
-    image: '/images/hero/hero_1.jpg',
+    image: HeroFirstImage,
     title: 'Level up your style with our summer collections',
   },
   {
     id: 2,
-    image: '/images/hero/hero_2.jpg',
+    image: HeroSecondImage,
     title: 'Level up your style with our summer collections',
   },
   {
     id: 3,
-    image: '/images/hero/hero_3.jpg',
+    image: HeroThirdImage,
     title: 'Level up your style with our summer collections',
   },
   {
     id: 4,
-    image: '/images/hero/hero_4.jpg',
+    image: HeroFourthImage,
     title: 'Level up your style with our summer collections',
   },
 ];

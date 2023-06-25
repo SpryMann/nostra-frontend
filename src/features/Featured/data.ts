@@ -1,3 +1,11 @@
+import {
+  FeaturedFifthImage,
+  FeaturedFirstImage,
+  FeaturedFourthImage,
+  FeaturedSecondImage,
+  FeaturedThirdImage,
+} from 'shared/assets';
+
 interface FeaturedDataItem {
   id: number;
   title: string;
@@ -11,7 +19,7 @@ const featuredData: FeaturedDataItem[] = [
   {
     id: 1,
     title: 'Cami Dress',
-    image: '/images/featured/featured_1.webp',
+    image: FeaturedFirstImage,
     oldPrice: 0,
     price: 8,
     isSale: false,
@@ -19,7 +27,7 @@ const featuredData: FeaturedDataItem[] = [
   {
     id: 2,
     title: 'Sleeve Shirt',
-    image: '/images/featured/featured_2.webp',
+    image: FeaturedSecondImage,
     oldPrice: 0,
     price: 20,
     isSale: false,
@@ -27,7 +35,7 @@ const featuredData: FeaturedDataItem[] = [
   {
     id: 3,
     title: 'Collar Overcoat',
-    image: '/images/featured/featured_3.webp',
+    image: FeaturedThirdImage,
     oldPrice: 45,
     price: 38,
     isSale: true,
@@ -35,7 +43,7 @@ const featuredData: FeaturedDataItem[] = [
   {
     id: 4,
     title: 'Wide Leg Pants',
-    image: '/images/featured/featured_4.jpg',
+    image: FeaturedFourthImage,
     oldPrice: 0,
     price: 23,
     isSale: false,
@@ -43,7 +51,7 @@ const featuredData: FeaturedDataItem[] = [
   {
     id: 5,
     title: 'Thermal Lined Hoodie',
-    image: '/images/featured/featured_5.webp',
+    image: FeaturedFifthImage,
     oldPrice: 0,
     price: 22,
     isSale: false,

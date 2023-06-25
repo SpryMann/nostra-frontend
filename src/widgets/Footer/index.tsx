@@ -4,6 +4,11 @@ import { Logo } from 'shared/ui';
 import footerMenu from './data';
 
 import styles from './styles.module.scss';
+import {
+  PaymentMastercardImage,
+  PaymentPaypalImage,
+  PaymentVisaImage,
+} from 'shared/assets';
 
 function Footer() {
   return (
@@ -39,17 +44,17 @@ function Footer() {
               <li className={styles.navigationPayments}>
                 <img
                   className={styles.navigationLogo}
-                  src="/images/payment_methods/mastercard.png"
+                  src={PaymentMastercardImage}
                   alt="Mastercard logo"
                 />
                 <img
                   className={styles.navigationLogo}
-                  src="/images/payment_methods/visa.png"
+                  src={PaymentVisaImage}
                   alt="Visa logo"
                 />
                 <img
                   className={styles.navigationLogo}
-                  src="/images/payment_methods/paypal.png"
+                  src={PaymentPaypalImage}
                   alt="Paypal logo"
                 />
               </li>

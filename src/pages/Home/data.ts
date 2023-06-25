@@ -1,3 +1,5 @@
+import { AdidasBrandImage, CalvinKleinBrandImage, ChanelBrandImage, DolceGabannaBrandImage, GucciBrandImage, GuessBrandImage, LevisBrandImage, VersaceBrandImage } from "shared/assets";
+
 interface BrandsDataItem {
   id: number;
   image: string;
@@ -8,49 +10,49 @@ interface BrandsDataItem {
 const brandsData: BrandsDataItem[] = [
   {
     id: 1,
-    image: '/images/brands/chanel.png',
+    image: ChanelBrandImage,
     title: 'Chanel logo',
     path: '/shop?brands=1',
   },
   {
     id: 2,
-    image: '/images/brands/calvin_klein.png',
+    image: CalvinKleinBrandImage,
     title: 'Calvin Klein logo',
     path: '/shop?brands=2',
   },
   {
     id: 3,
-    image: '/images/brands/guess.png',
+    image: GuessBrandImage,
     title: 'Guess logo',
     path: '/shop?brands=3',
   },
   {
     id: 4,
-    image: '/images/brands/gucci.png',
+    image: GucciBrandImage,
     title: 'Gucci logo',
     path: '/shop?brands=4',
   },
   {
     id: 5,
-    image: '/images/brands/dolce_gabanna.png',
+    image: DolceGabannaBrandImage,
     title: 'Dolce & Gabanna logo',
     path: '/shop?brands=5',
   },
   {
     id: 6,
-    image: '/images/brands/adidas.png',
+    image: AdidasBrandImage,
     title: 'Adidas logo',
     path: '/shop?brands=6',
   },
   {
     id: 7,
-    image: '/images/brands/levis.png',
+    image: LevisBrandImage,
     title: "Levi's logo",
     path: '/shop?brands=7',
   },
   {
     id: 8,
-    image: '/images/brands/versace.png',
+    image: VersaceBrandImage,
     title: 'Versace logo',
     path: '/shop?brands=8',
   },

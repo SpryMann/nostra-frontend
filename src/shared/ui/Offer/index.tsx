@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { OfferImage } from 'shared/assets';
 
 import styles from './styles.module.scss';
 
@@ -17,7 +18,7 @@ function Offer(props: Props) {
         <div className={styles.offerImageWrapper}>
           <img
             className={styles.offerImage}
-            src="/images/offer.jpg"
+            src={OfferImage}
             alt="Two girls in white clothes lying on the floor"
           />
           <div className={styles.offerImageOverlay} />
