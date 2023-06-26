@@ -14,42 +14,40 @@ function Subscription() {
   };
 
   return (
-    <div className="container">
-      <div className={styles.subscription}>
-        <h2 className={styles.subscriptionTitle}>
-          Subscribe to our newsletter to get updates to our latest collections
-        </h2>
-        <p className={styles.subscriptionDescription}>
-          Get 20% off on your first order just by subscribing to our newsletter
-        </p>
-        <form
-          className={classNames(styles.form, styles.subscriptionForm)}
-          onSubmit={handleSubmitForm}
-        >
-          <div className={styles.formGroup}>
-            <FaRegEnvelope className={styles.formIcon} />
-            <input
-              className={styles.formInput}
-              type="email"
-              placeholder="Enter your email"
-              autoComplete="on"
-              value={emailValue}
-              onChange={(event) => setEmailValue(event.target.value)}
-            />
-          </div>
-          <button className={styles.formButton} type="submit">
-            Subscribe
-          </button>
-        </form>
-        <p className={styles.subscriptionMessage}>
-          You will be able to unsubscribe at any time.
-          <br />
-          Read our Privacy Policy{' '}
-          <Link className={styles.subscriptionLink} to="/policy">
-            here
-          </Link>
-        </p>
-      </div>
+    <div className={styles.subscription}>
+      <h2 className={styles.subscriptionTitle}>
+        Subscribe to our newsletter to get updates to our latest collections
+      </h2>
+      <p className={styles.subscriptionDescription}>
+        Get 20% off on your first order just by subscribing to our newsletter
+      </p>
+      <form
+        className={classNames(styles.form, styles.subscriptionForm)}
+        onSubmit={handleSubmitForm}
+      >
+        <div className={styles.formGroup}>
+          <FaRegEnvelope className={styles.formIcon} />
+          <input
+            className={styles.formInput}
+            type="email"
+            placeholder="Enter your email"
+            autoComplete="on"
+            value={emailValue}
+            onChange={(event) => setEmailValue(event.target.value)}
+          />
+        </div>
+        <button className={styles.formButton} type="submit">
+          Subscribe
+        </button>
+      </form>
+      <p className={styles.subscriptionMessage}>
+        You will be able to unsubscribe at any time.
+        <br />
+        Read our Privacy Policy{' '}
+        <Link className={styles.subscriptionLink} to="/policy">
+          here
+        </Link>
+      </p>
     </div>
   );
 }

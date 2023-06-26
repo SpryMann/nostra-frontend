@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BsCart, BsTrash } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useOnClickOutside } from 'shared/lib';
@@ -36,6 +36,16 @@ function Cart(props: Props) {
     setProducts((prev) => prev.filter((item) => item.id !== productId));
   };
   const handleResetCart = () => setProducts([]);
+
+  useEffect(() => {
+    if (matchMedia('screen and (max-width: 768px').matches) {
+      if (isActive) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
+    }
+  }, [isActive]);
 
   return (
     <div
