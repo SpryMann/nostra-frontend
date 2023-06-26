@@ -1,0 +1,30 @@
+.size {
+  @media (hover: hover) and (pointer: fine) {
+    cursor: pointer;
+  }
+
+  &Input {
+    &:checked ~ .sizeText {
+      border-color: var(--color-gray-700);
+    }
+
+    &:focus ~ .sizeText {
+      box-shadow: 0px 0px 0px 4px #f2f4f7,
+        0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+  }
+
+  &Text {
+    display: inline-block;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 0.6rem;
+    padding: 0.3rem 0.8rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-gray-700);
+    background: var(--hex-white);
+    user-select: none;
+    transition: all 0.2s ease;
+  }
+}
