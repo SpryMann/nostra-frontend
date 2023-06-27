@@ -3,6 +3,12 @@
     margin-bottom: 3.2rem;
   }
 
+  &Content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
   &Section {
     margin-bottom: 6.4rem;
   }

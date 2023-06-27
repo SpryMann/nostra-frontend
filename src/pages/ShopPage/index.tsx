@@ -1,4 +1,5 @@
-import { Filter, Subscription } from 'features';
+import classNames from 'classnames';
+import { Filter, ShopProducts, Subscription } from 'features';
 import { useState } from 'react';
 import { Breadcrumbs, Offer } from 'shared/ui';
 
@@ -10,12 +11,10 @@ function ShopPage() {
   return (
     <div className="container">
       <Breadcrumbs className={styles.shopBreadcrumbs} />
-      <div className={styles.shopSection}>
+      <div className={classNames(styles.shopContent, styles.shopSection)}>
         <Filter isActive={showFilter} onClose={() => setShowFilter(false)} />
+        <ShopProducts openFilter={() => setShowFilter(true)} />
       </div>
-      <button type="button" onClick={() => setShowFilter(true)}>
-        Open filters
-      </button>
       <Offer className={styles.shopSection} />
       <Subscription />
     </div>

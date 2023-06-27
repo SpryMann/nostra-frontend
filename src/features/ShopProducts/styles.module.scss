@@ -1,0 +1,129 @@
+.products {
+  &Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &SearchResult {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--color-gray-700);
+  }
+
+  &SortFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    @media screen and (min-width: 576px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      gap: 0;
+      width: auto;
+    }
+  }
+
+  &Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--hex-white);
+    background: var(--hex-black);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+    @media screen and (min-width: 576px) {
+      flex: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px #f4ebff,
+        0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+  }
+
+  &Filters {
+    margin-bottom: 2rem;
+  }
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+
+    @media screen and (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &Pagination {
+    margin-top: 3.2rem;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  @media screen and (min-width: 576px) {
+    width: auto;
+  }
+
+  &Text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--color-gray-700);
+    white-space: nowrap;
+  }
+
+  &Select {
+    flex: 1;
+
+    @media screen and (min-width: 576px) {
+      flex: unset;
+      width: 32rem;
+    }
+  }
+}
