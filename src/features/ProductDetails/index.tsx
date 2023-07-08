@@ -14,12 +14,12 @@ import {
 import styles from './styles.module.scss';
 
 interface Props {
-  productId: string;
+  // productId: string;
   className?: string;
 }
 
 function ProductDetails(props: Props) {
-  const { productId, className = '' } = props;
+  const { className = '' } = props;
   const [chosenSize, setChosenSize] = useState('s');
   const [chosenColor, setChosenColor] = useState('black');
 
