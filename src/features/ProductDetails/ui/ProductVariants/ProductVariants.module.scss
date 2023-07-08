@@ -1,0 +1,16 @@
+.variants {
+  &Title {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-600);
+    text-transform: capitalize;
+  }
+
+  &List {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

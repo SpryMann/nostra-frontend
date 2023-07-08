@@ -19,6 +19,7 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
+    'react/destructuring-assignment': 'off',
     'import/order': 0,
     'simple-import-sort/exports': 1,
     'simple-import-sort/imports': [

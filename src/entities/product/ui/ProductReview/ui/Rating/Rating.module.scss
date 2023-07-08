@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  &Icon {
+    color: var(--color-gray-300);
+
+    &Fill {
+      color: var(--color-orange-300);
+    }
+  }
+}

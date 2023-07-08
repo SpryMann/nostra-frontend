@@ -1,0 +1,26 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &Stars {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  &Star {
+    color: var(--color-gray-300);
+
+    &Fill {
+      color: var(--color-orange-300);
+    }
+  }
+
+  &Stats {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-600);
+  }
+}

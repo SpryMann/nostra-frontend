@@ -1,0 +1,155 @@
+.discussion {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+
+  &ImageWrapper {
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    overflow: hidden;
+  }
+
+  &Image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  &Content {
+    flex: 1;
+  }
+
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &Name {
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-700);
+  }
+
+  &Date,
+  &Stats {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-gray-600);
+    white-space: nowrap;
+  }
+
+  &Text {
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-600);
+  }
+
+  &Actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  &Button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-gray-600);
+    transition: color 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-gray-800);
+      }
+    }
+
+    &:focus {
+      color: var(--color-gray-800);
+    }
+  }
+
+  &Icon {
+    margin-top: 0.2rem;
+  }
+
+  &Textarea {
+    display: none;
+
+    &Active {
+      display: flex;
+      margin-top: 1.6rem;
+    }
+  }
+
+  &Replies {
+    padding-top: 1.6rem;
+  }
+}
+
+.replies {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -3.6rem;
+    bottom: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: var(--color-gray-200);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: all 0.2s ease;
+  }
+
+  &Button {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-700);
+    transition: color 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-gray-900);
+      }
+    }
+
+    &:focus {
+      color: var(--color-gray-900);
+    }
+  }
+
+  &Content {
+    display: none;
+  }
+
+  &Active {
+    &::before {
+      opacity: 100%;
+      visibility: visible;
+    }
+
+    .repliesContent {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      margin-top: 1.6rem;
+    }
+  }
+}

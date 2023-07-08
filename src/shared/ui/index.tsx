@@ -10,3 +10,5 @@ export { default as ProductCard } from './ProductCard';
 export { default as Search } from './Search';
 export { default as Section } from './Section';
 export { default as Select } from './Select';
+export { Tabs, type TabsTitle } from './Tabs';
+export { default as Textarea } from './Textarea';

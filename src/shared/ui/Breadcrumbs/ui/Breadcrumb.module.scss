@@ -9,6 +9,7 @@
     line-height: 2rem;
     color: var(--color-gray-600);
     text-transform: capitalize;
+    white-space: nowrap;
 
     &Link {
       border-radius: 0.6rem;
@@ -36,8 +37,13 @@
 
   &Last {
     .breadcrumbTitle {
+      padding-left: 0.8rem;
       font-weight: 600;
       color: var(--color-gray-700);
+
+      @media screen and (min-width: 576px) {
+        padding-left: 0;
+      }
     }
   }
 }
