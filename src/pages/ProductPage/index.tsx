@@ -6,7 +6,6 @@ import {
   ProductsSlider,
 } from 'features';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { Breadcrumbs, Tabs } from 'shared/ui';
 
 import { detailsData, relatedProductsData, tabsData } from './data';
@@ -14,13 +13,12 @@ import { detailsData, relatedProductsData, tabsData } from './data';
 import styles from './styles.module.scss';
 
 function ProductPage() {
-  const { id } = useParams<{ id: string }>();
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   return (
     <div className="container">
       <Breadcrumbs className={styles.productBreadcrumbs} />
-      <ProductDetails className={styles.productSection} productId={id ?? ''} />
+      <ProductDetails className={styles.productSection} />
       <Tabs
         className={styles.productTabs}
         activeIndex={activeTabIndex}
