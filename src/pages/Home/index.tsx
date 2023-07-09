@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import { Curated, Experiences, Featured, Subscription } from 'features';
+import { Curated, Experiences, ProductsSlider, Subscription } from 'features';
 import { Link } from 'react-router-dom';
 import { Hero, Offer, Section } from 'shared/ui';
 
-import brandsData from './data';
+import { brandsData, featuredProductsData } from './data';
 
 import styles from './styles.module.scss';
 
@@ -26,7 +26,12 @@ function Home() {
       </Section>
       <Experiences className={styles.homeSection} />
       <Curated className={styles.homeSection} />
-      <Featured className={styles.homeSection} />
+      <ProductsSlider
+        className={styles.homeSection}
+        title="Featured products"
+        data={featuredProductsData}
+        itemsPerSlide={3}
+      />
       <div className={classNames(styles.separator, styles.homeSeparator)}>
         <div className={styles.separatorInner} />
       </div>

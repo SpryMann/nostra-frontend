@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import { Logo } from 'shared/ui';
-
-import footerMenu from './data';
-
-import styles from './styles.module.scss';
 import {
   PaymentMastercardImage,
   PaymentPaypalImage,
   PaymentVisaImage,
 } from 'shared/assets';
+import { Logo } from 'shared/ui';
+
+import footerMenu from './data';
+
+import styles from './styles.module.scss';
 
 function Footer() {
   return (
