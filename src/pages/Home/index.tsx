@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 
 function Home() {
   return (
-    <div className="container">
+    <div className={classNames('container', styles.home)}>
       <Hero className={styles.homeHero} />
       <Section className={styles.homeSection} title="Brands">
         <div className={styles.homeBrands}>

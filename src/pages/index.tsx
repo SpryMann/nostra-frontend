@@ -4,6 +4,7 @@ import { Footer, Header } from 'widgets';
 
 const Home = lazy(() => import('./Home'));
 const ProductPage = lazy(() => import('./ProductPage'));
+const ProfilePage = lazy(() => import('./ProfilePage'));
 const ShopPage = lazy(() => import('./ShopPage'));
 
 function Layout() {
@@ -26,6 +27,7 @@ function Routing() {
           <Route index element={<Navigate to="/shop" />} />
           <Route path=":id" element={<ProductPage />} />
         </Route>
+        <Route path="profile" element={<ProfilePage />} />
       </Route>
     </Routes>
   );

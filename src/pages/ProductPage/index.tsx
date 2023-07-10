@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { ProductDescription } from 'entities/product';
 import {
   ProductDetails,
@@ -16,7 +17,7 @@ function ProductPage() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   return (
-    <div className="container">
+    <div className={classNames('container', styles.product)}>
       <Breadcrumbs className={styles.productBreadcrumbs} />
       <ProductDetails className={styles.productSection} />
       <Tabs

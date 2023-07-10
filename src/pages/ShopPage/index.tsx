@@ -9,7 +9,7 @@ function ShopPage() {
   const [showFilter, setShowFilter] = useState(false);
 
   return (
-    <div className="container">
+    <div className={classNames('container', styles.shop)}>
       <Breadcrumbs className={styles.shopBreadcrumbs} />
       <div className={classNames(styles.shopContent, styles.shopSection)}>
         <Filter isActive={showFilter} onClose={() => setShowFilter(false)} />
