@@ -45,6 +45,7 @@ import ProductFifthImage from './product/product_5.webp';
 import ProductSixthImage from './product/product_6.webp';
 import AvatarImage from './avatar.jpg';
 import OfferImage from './offer.jpg';
+import TextureImage from './texture.jpg';
 
 export {
   AdidasBrandImage,
@@ -93,5 +94,6 @@ export {
   ProductSecondImage,
   ProductSixthImage,
   ProductThirdImage,
+  TextureImage,
   VersaceBrandImage,
 };

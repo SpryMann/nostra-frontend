@@ -24,6 +24,7 @@ function Menu(props: Props) {
 
   useOnClickOutside(containerRef, onClose);
 
+  const handleClickLink = () => toggleActive();
   const handleLogout = () => setIsAuth(false);
 
   return (
@@ -66,7 +67,11 @@ function Menu(props: Props) {
                     })}
                     key={item.id}
                   >
-                    <Link className={styles.link} to={item.path}>
+                    <Link
+                      className={styles.link}
+                      to={item.path}
+                      onClick={handleClickLink}
+                    >
                       {item.icon(styles.linkIcon)}
                       {item.text}
                     </Link>
