@@ -5,9 +5,15 @@ import { AvatarImage, TextureImage } from 'shared/assets';
 
 import styles from './styles.module.scss';
 
-function UserProfile() {
+interface Props {
+  className?: string;
+}
+
+function UserProfile(props: Props) {
+  const { className = '' } = props;
+
   return (
-    <div className={styles.profile}>
+    <div className={classNames(styles.profile, className)}>
       <div className={styles.profileTop}>
         <div className={styles.profileCoverWrapper}>
           <img

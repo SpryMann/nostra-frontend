@@ -3,6 +3,7 @@ export { default as Curated } from './Curated';
 export { default as Experiences } from './Experiences';
 export { default as Filter } from './Filter';
 export { default as Menu } from './Menu';
+export { default as OrderHistory } from './OrderHistory';
 export { default as ProductDetails } from './ProductDetails';
 export { default as ProductDiscussions } from './ProductDiscussions';
 export { default as ProductReviews } from './ProductReviews';

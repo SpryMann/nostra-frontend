@@ -9,19 +9,21 @@ import styles from './styles.module.scss';
 
 interface Props {
   activeIndex: number;
+  layout: 'lined' | 'buttons';
   setActiveIndex: (newIndex: number) => void;
-  tabClassName: string;
   titles: TabsTitle[];
   className?: string;
+  tabClassName?: string;
 }
 
 function Tabs(props: Props) {
   const {
     activeIndex,
+    layout,
     setActiveIndex,
-    tabClassName,
     titles,
     className = '',
+    tabClassName = '',
   } = props;
   const [showTabs, setShowTabs] = useState(false);
   const activeTab = titles[activeIndex];
@@ -51,7 +53,13 @@ function Tabs(props: Props) {
         <BiChevronRight className={styles.tabsChevron} />
       </button>
       <div className={styles.tabsContainer}>
-        <ul className={styles.tabsList}>
+        <ul
+          className={classNames(
+            styles.tabsList,
+            { [styles.tabsListLined]: layout === 'lined' },
+            { [styles.tabsListButtons]: layout === 'buttons' }
+          )}
+        >
           {titles.map((item, index) => (
             <li
               className={classNames(styles.tabsItem, tabClassName, {

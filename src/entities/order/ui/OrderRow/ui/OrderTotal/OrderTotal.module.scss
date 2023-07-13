@@ -1,0 +1,58 @@
+.total {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  width: fit-content;
+  background: var(--hex-white);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+
+  @media screen and (min-width: 576px) {
+    width: 100%;
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &Key {
+    width: 9rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-gray-500);
+  }
+
+  &Value {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-700);
+    white-space: nowrap;
+
+    &Bold {
+      font-weight: 500;
+      color: var(--color-gray-900);
+    }
+  }
+
+  &Full {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+
+    @media screen and (min-width: 576px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

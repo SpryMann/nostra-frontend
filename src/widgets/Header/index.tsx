@@ -72,9 +72,9 @@ function Header() {
         <Navigation
           isActive={showNavigation}
           onClose={handleCloseNavigation}
-          searchbar={<Search />}
+          searchbar={<Search placeholder="Search" />}
         />
-        <Search className={styles.headerSearch} />
+        <Search className={styles.headerSearch} placeholder="Search" />
         <Cart
           className={styles.headerCart}
           isActive={showCart}

@@ -1,0 +1,45 @@
+.table {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 1.2rem;
+  width: 100%;
+  background: var(--hex-white);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  overflow: scroll;
+
+  &Header {
+    display: flex;
+    width: fit-content;
+    background: var(--color-gray-50);
+
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+    }
+
+    .tableCell {
+      padding: 1.2rem 2.4rem;
+      width: 15rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      color: var(--color-gray-600);
+      white-space: nowrap;
+
+      &:first-of-type {
+        flex: unset;
+        flex-shrink: 0;
+        width: 8.4rem;
+      }
+    }
+  }
+
+  &Cell {
+    flex-shrink: 0;
+    width: 15rem;
+
+    @media screen and (min-width: 1200px) {
+      flex: 1;
+      width: auto;
+    }
+  }
+}

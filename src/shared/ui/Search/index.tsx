@@ -6,11 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 interface Props {
+  placeholder: string;
   className?: string;
 }
 
 function Search(props: Props) {
-  const { className = '' } = props;
+  const { placeholder, className = '' } = props;
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -28,7 +29,7 @@ function Search(props: Props) {
       <input
         className={styles.searchInput}
         type="text"
-        placeholder="Search"
+        placeholder={placeholder}
         value={searchQuery}
         onChange={handleInput}
         onKeyDown={handleKeyDown}

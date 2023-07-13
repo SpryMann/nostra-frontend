@@ -23,6 +23,7 @@ function ProductPage() {
       <Tabs
         className={styles.productTabs}
         activeIndex={activeTabIndex}
+        layout="lined"
         setActiveIndex={(newIndex: number) => setActiveTabIndex(newIndex)}
         tabClassName={styles.productTab}
         titles={tabsData}

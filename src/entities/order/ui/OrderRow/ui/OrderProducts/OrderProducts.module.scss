@@ -1,0 +1,81 @@
+.table {
+  display: table;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 1.2rem;
+  background: var(--hex-white);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  overflow: hidden;
+
+  &Header {
+    display: table-row;
+    background: var(--color-gray-50);
+
+    .tableCell {
+      padding: 1.2rem 2.4rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      color: var(--color-gray-600);
+    }
+  }
+
+  &Cell {
+    display: table-cell;
+  }
+
+  &Row {
+    display: table-row;
+
+    .tableCell {
+      border-top: 1px solid var(--color-gray-200);
+      padding: 1.6rem 2.4rem;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: var(--color-gray-900);
+      vertical-align: middle;
+    }
+  }
+}
+
+.product {
+  display: flex;
+  gap: 1.2rem;
+
+  &Image {
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &Wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.8rem;
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &Title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--color-gray-700);
+  }
+
+  &Id {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-gray-500);
+  }
+}
